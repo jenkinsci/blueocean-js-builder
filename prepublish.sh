@@ -4,7 +4,7 @@
 
 set -e
 
-REPO=js-builder
+REPO=blueocean-js-builder
 
 if [[ "$npm_config_argv" == *"\"cooked\":[\"install\""* ]]
 then
