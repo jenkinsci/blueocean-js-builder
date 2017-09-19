@@ -29,7 +29,7 @@ var retestRunning = false;
 logger.logInfo('**********************************************************************');
 logger.logInfo('This build is using Jenkins JS Builder.');
 logger.logInfo('  For command line options and other help, go to');
-logger.logInfo('  https://www.npmjs.com/package/@jenkins-cd/js-builder');
+logger.logInfo('  https://www.npmjs.com/package/@jenkins-blueocean/js-builder');
 logger.logInfo('**********************************************************************');
 
 if (maven.isMavenProject) {

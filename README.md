@@ -56,7 +56,7 @@ The responsibilities of the components in the above diagram can be summarized as
 # Install
 
 ```
-npm install --save-dev @jenkins-cd/js-builder
+npm install --save-dev @jenkins-blueocean/js-builder
 ```
 
 > This assumes you have [node.js] (minimum v4.0.0) installed on your local development environment.
@@ -70,7 +70,7 @@ npm install --save-dev @jenkins-cd/js-builder
 Add a `gulpfile.js` (see [Gulp]) in the same folder as the `package.json`. Then use `js-builder` as follows:
 
 ```javascript
-var builder = require('@jenkins-cd/js-builder');
+var builder = require('@jenkins-blueocean/js-builder');
 
 builder.bundle('./src/main/js/myappbundle.js');
 
@@ -241,7 +241,7 @@ This `listener` function, when called, receives the `bundle` as `this` and the `
 the supplied `listener`.
 
 ```javascript
-var builder = require('@jenkins-cd/js-builder');
+var builder = require('@jenkins-blueocean/js-builder');
 
 builder.onPreBundle(function(bundler) {
     var bundle = this;
@@ -269,7 +269,7 @@ Otherwise, they are:
 Changing these defaults is done through the `builder` instance e.g.:
 
 ```javascript
-var builder = require('@jenkins-cd/js-builder');
+var builder = require('@jenkins-blueocean/js-builder');
 
 builder.src('src/main/js');
 builder.tests('src/test/js');
@@ -387,7 +387,7 @@ $ mvn clean -DskipLint
 You can install `js-builder` globally and then use it as command-line tool.
 
 ```
-sudo npm install -g @jenkins-cd/js-builder 
+sudo npm install -g @jenkins-blueocean/js-builder 
 ```
 
 Once installed, you do not need a globally installed [Gulp] in order to run `js-builder` builds. Instead, you can execute build tasks via
@@ -421,7 +421,7 @@ because the <a href="#cli">CLI</a> has it's own built in `gulpfile.js`.
 If your `gulpfile.js` is as simple as:
 
 ```javascript
-var builder = require('@jenkins-cd/js-builder');
+var builder = require('@jenkins-blueocean/js-builder');
 
 //
 // Create a bundle.
