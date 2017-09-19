@@ -1,6 +1,6 @@
 /**
  * peer dependencies can define js-builder "plugins" by defining 
- * a @jenkins-cd/js-builder.js file.
+ * a @jenkins-blueocean/js-builder.js file.
  */
 
 var paths = require('./paths');
@@ -13,7 +13,7 @@ var logger = require('./logger');
 exports.install = function(builder) {
     // Iterate over all of the installed node_modules. If a given dependency
     // is listed as a dependency of "this" package, then lets see if it has
-    // a @jenkins-cd/js-builder.js file.
+    // a @jenkins-blueocean/js-builder.js file.
     
     paths.walkDirs(cwd + '/node_modules', function(dir) {
         var packageJsonFile = path.resolve(dir, 'package.json');
@@ -21,7 +21,7 @@ exports.install = function(builder) {
             try {
                 var packageJson = require(packageJsonFile);
                 if (dependencies.getDependency(packageJson.name)) {
-                    var pluginFile = path.resolve(dir, '@jenkins-cd/js-builder.js');
+                    var pluginFile = path.resolve(dir, '@jenkins-blueocean/js-builder.js');
                     if (fs.existsSync(pluginFile)) {
                         logger.logInfo('Running Jenkins js-builder plugin: ' + packageJson.name);
                         var plugin = require(pluginFile);

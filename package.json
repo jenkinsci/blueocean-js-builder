@@ -1,6 +1,6 @@
 {
   "name": "@jenkins-blueocean/js-builder",
-  "version": "0.0.61",
+  "version": "0.0.62",
   "description": "Jenkins CI JavaScript Build utilities.",
   "main": "index.js",
   "scripts": {
